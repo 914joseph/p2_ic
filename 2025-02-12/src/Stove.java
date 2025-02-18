@@ -2,8 +2,8 @@ public class Stove extends Product {
 
     private int burners;
 
-    public Stove(String name, double price) {
-        super(name, price);
+    public Stove(String brand, double price) {
+        super(brand, price);
         //TODO Auto-generated constructor stub
     }
     

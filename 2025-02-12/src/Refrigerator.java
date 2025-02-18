@@ -2,8 +2,8 @@ public class Refrigerator extends Product {
 
     private int size;
 
-    public Refrigerator(String name, double price) {
-        super(name, price);
+    public Refrigerator(String brand, double price) {
+        super(brand, price);
         //TODO Auto-generated constructor stub
     }
     
