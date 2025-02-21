@@ -1,24 +1,30 @@
-public class Fisica extends Pessoa {
-
-    private double gastosSaude;
-
-    public Fisica(String nome, double rendaAnual, double gastosSaude) {
-        super(nome, rendaAnual, calcularImposto(rendaAnual, gastosSaude));
-        this.gastosSaude = gastosSaude;
-        System.out.println("Pessoa física criada com sucesso!");
+public class Fisica extends Pessoa{
+    
+    private double gastoSaude;
+    
+    public Fisica(String nome,double renda,double gastoSaude){
+        super(nome, renda);
+        this.gastoSaude = gastoSaude;
     }
-
-    private static double calcularImposto(double rendaAnual, double gastosSaude) {
-        double imposto;
-        if (rendaAnual < 20000) {
-            imposto = rendaAnual * 0.15;
-        } else {
-            imposto = rendaAnual * 0.25;
-        }
-        return imposto - (gastosSaude * 0.5);
+    
+    
+    public double getGastoSaude(){
+        
+        return gastoSaude;
+        
     }
-
-    public double getGastosSaude() {
-        return gastosSaude;
+    @Override
+    public double calculaImposto(){
+        double prob;
+        if(this.getRenda()<20000){
+                prob = 0.15;
+            }else{
+                prob = 0.25;
+            }
+            double impostosaud = this.getGastoSaude()*0.5;
+            double calc = ((this.getRenda()*prob)-(impostosaud));
+            return calc;
     }
+    
+    
 }
