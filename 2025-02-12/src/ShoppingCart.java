@@ -40,7 +40,7 @@ public class ShoppingCart {
         } else {
             System.out.println("Digite o número ao lado do produto a ser removido:");
             for (int i = 0; i < products.size(); i++) {
-                System.out.println("[" + i + "] " + products.get(i).getName() + " - R$" + products.get(i).getPrice());
+                System.out.println("[" + i + "] " + products.get(i).getbrand() + " - R$" + products.get(i).getPrice());
             }
             int operator = scanner.nextInt();
             products.remove(operator);
@@ -57,7 +57,7 @@ public class ShoppingCart {
 
             String finall = "";
             for (int i = 0; i < products.size(); i++) {
-                finall += "[" + products.get(i).getName() + ";R$" + products.get(i).getPrice() + "]\n";
+                finall += "[" + products.get(i).getbrand() + ";R$" + products.get(i).getPrice() + "]\n";
             }
             return finall;
         }
